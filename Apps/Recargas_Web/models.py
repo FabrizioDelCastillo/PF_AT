@@ -1,23 +1,24 @@
 # Importa los modelos de Django
 from django.db import models
 
+
 # Modelo para la tabla CALIMACO
 class Calimaco(models.Model):
-    id = models.AutoField(primary_key=True, default=1)
-    Cliente = models.IntegerField(default=0)
-    Fecha = models.DateTimeField()
-    Estado = models.CharField(max_length=100)
-    Fecha_de_modificacion = models.DateTimeField()
-    Usuario = models.CharField(max_length=100)
-    Email = models.EmailField()
-    Cantidad = models.IntegerField(default=0)
-    Id_externo = models.IntegerField()
-    Respuesta = models.CharField(max_length=255)
-    Agente = models.IntegerField()
-    Fecha_de_registro_del_jugador = models.DateTimeField()
+    cliente = models.CharField(max_length=20, default="Unknown")
+    fecha = models.DateField(auto_now=True)
+    estado = models.CharField(max_length=20, default="Pending")
+    fecha_modificacion = models.DateField(auto_now=True)
+    usuario = models.CharField(max_length=20, default="Unknown")
+    email = models.EmailField(default="example@example.com")
+    cantidad = models.IntegerField(default=0)
+    id_externo = models.CharField(max_length=20, default="Unknown")
+    respuesta = models.TextField(default="N/A")
+    agente = models.IntegerField(default=0)
+    fecha_de_registro_del_jugador = models.DateField(auto_now=True)
 
     class Meta:
-        db_table = 'CALIMACO'  # Nombre de la tabla en la base de datos
+        db_table = "CALIMACO"  # Nombre de la tabla en la base de datos
+
 
 # Modelo para la tabla GESTION_RW
 class GestionRW(models.Model):
@@ -37,4 +38,4 @@ class GestionRW(models.Model):
     Promotor = models.CharField(max_length=100)
 
     class Meta:
-        db_table = 'GESTION_RW'  # Nombre de la tabla en la base de datos
+        db_table = "GESTION_RW"  # Nombre de la tabla en la base de datos
