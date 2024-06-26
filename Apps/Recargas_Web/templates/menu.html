@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Menú Recargas Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #1e90ff, #ff6347);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .button-green {
+            background-color: #00a86b;
+        }
+        .button:hover {
+            background-color: white;
+            color: black;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menú de Recargas Web</h1>
+    <div class="container">
+        <a href="{% url 'inicio_login' %}" class="button button-green">CALIMACO</a>
+        <a href="{% url 'cargar_archivo_gestionrw' %}" class="button">GESTION</a>
+    </div>
+</body>
+</html>

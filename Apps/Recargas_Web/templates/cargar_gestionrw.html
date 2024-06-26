@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Cargar db Calimaco</title>
+    <title>Cargar db Gestión</title>
     <link
       rel="shortcut icon"
       href="{% static 'ASSETS/imgs/favicon.ico' %}"
@@ -19,6 +19,13 @@
     <link rel="stylesheet" href="{% static 'assets/css/home.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/file.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/loading.css' %}" />
+    <style>
+      /* Estilos personalizados */
+      .verde {
+        background-color: #28a745 !important; /* Verde de Bootstrap */
+        color: white !important;
+      }
+    </style>
   </head>
   <body>
     <div class="contentLoading" style="display: none">
@@ -62,7 +69,7 @@
             </label>
 
             <div class="d-grid gap-2 col-6 mx-auto mt-5">
-              <button class="btn btn-primary verde" type="submit">
+              <button class="btn btn-primary azul" type="submit">
                 Cargar Data
               </button>
             </div>
