@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Recargas Web</title>
+    <title>BIENVENIDO</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -10,6 +10,12 @@
             color: white;
             text-align: center;
             padding: 50px;
+        }
+        .button-container {
+            background-color: white;
+            display: inline-block;
+            padding: 20px; /* Espacio alrededor del botón */
+            border-radius: 10px; /* Bordes redondeados */
         }
         .button {
             background-color: #32cd32;
@@ -20,9 +26,9 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 4px 2px;
             transition-duration: 0.4s;
             cursor: pointer;
+            border-radius: 5px; /* Bordes redondeados para el botón */
         }
         .button:hover {
             background-color: white;
@@ -34,9 +40,11 @@
     </style>
 </head>
 <body>
-    <h1>Bienvenido a Recargas Web</h1>
+    <h1>Bienvenido Fabrizio PF_AT😉 </h1>
     <div class="container">
-        <a href="{% url 'menu' %}" class="button">Recargas Web</a>
+        <div class="button-container">
+            <a href="{% url 'menu' %}" class="button">Recargas Web</a>
+        </div>
     </div>
 </body>
 </html>

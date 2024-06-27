@@ -2,14 +2,31 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Menú Recargas Web</title>
+    <title>RECARGAS WEB</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(45deg, #1e90ff, #ff6347);
+            background: linear-gradient(to right, #000000 0%, #ff0000 100%); /* Fondo difuminado de negro a rojo */
             color: white;
             text-align: center;
-            padding: 50px;
+            padding: 50px 0; /* Ajuste del padding en el eje vertical */
+            margin: 0; /* Asegura que no haya márgenes externos */
+            min-height: 100vh; /* Ocupa toda la altura visible del viewport */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Alinea el contenido al centro vertical */
+            align-items: center;
+        }
+        .button-container {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+            padding: 20px; /* Espacio alrededor de los botones */
+            border-radius: 10px; /* Bordes redondeados */
+            width: 100%; /* Ancho del contenedor al 100% */
+            max-width: 600px; /* Ancho máximo */
+            display: flex;
+            justify-content: center; /* Centra los elementos horizontalmente */
+            align-items: center; /* Centra los elementos verticalmente */
+            flex-wrap: wrap; /* Permite que los botones se envuelvan si no caben en una sola línea */
         }
         .button {
             background-color: #007bff;
@@ -20,9 +37,12 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 4px 2px;
+            margin: 10px; /* Espacio entre los botones */
             transition-duration: 0.4s;
             cursor: pointer;
+            flex: 1; /* Para que los botones ocupen el espacio disponible */
+            max-width: 200px; /* Ancho máximo para los botones */
+            border-radius: 5px; /* Bordes redondeados para el botón */
         }
         .button-green {
             background-color: #00a86b;
@@ -31,16 +51,19 @@
             background-color: white;
             color: black;
         }
-        .container {
-            margin-top: 50px;
+        h1 {
+            margin-top: 0; /* Elimina el margen superior predeterminado */
         }
     </style>
 </head>
 <body>
-    <h1>Menú de Recargas Web</h1>
-    <div class="container">
+    <h1>😊 Subir la database &#x1F4C3;</h1>
+    <div class="button-container">
         <a href="{% url 'inicio_login' %}" class="button button-green">CALIMACO</a>
         <a href="{% url 'cargar_archivo_gestionrw' %}" class="button">GESTION</a>
     </div>
 </body>
 </html>
+
+
+
