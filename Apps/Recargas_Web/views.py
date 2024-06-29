@@ -121,8 +121,7 @@ def cargar_archivo(request):
 
     except Exception as e:
         print(f"Error al cargar el archivo: {str(e)}")
-        return JsonResponse(
-            {
+        return JsonResponse({
                 "status_server": "error",
                 "message": f"Error interno del servidor: {str(e)}",
             }
@@ -233,7 +232,7 @@ def cargar_archivo_gestionrw(request):
             return JsonResponse(
                 {
                     "status_server": "success",
-                    "message": "Felicitaciones, la data fue importada correctamente 😉",
+                    "message": "Felicitaciones, la data fue importada correctamente got",
                 }
             )
         else:

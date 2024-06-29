@@ -49,10 +49,7 @@
       <div class="row">
         <div class="col-md-12">
           <form
-            name="formXLSX"
-            id="formXLSX"
-            method="post"
-            enctype="multipart/form-data">
+            action="{% url 'cargar_archivo_gestionrw' %}" name="formXLSX_RW" id="formXLSX_RW" method="post" enctype="multipart/form-data">
             {% csrf_token %}
 
             <label class="input-file">
@@ -65,7 +62,7 @@
                 name="archivo"
                 id="archivo"
                 class="fileInput verde"
-                accept=".xlsx" />
+                accept=".xlsx, .xls, .csv" />
             </label>
 
             <div class="d-grid gap-2 col-6 mx-auto mt-5">
