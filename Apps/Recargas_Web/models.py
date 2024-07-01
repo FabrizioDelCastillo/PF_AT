@@ -2,7 +2,7 @@
 from django.db import models
 
 class Calimaco(models.Model):
-    cliente = models.CharField(max_length=20, default="Unknown")
+    identifer_cal = models.CharField(max_length=20, default="Unknown")
     fecha = models.DateTimeField()
     estado = models.CharField(max_length=20, default="Pending")
     fecha_modificacion = models.DateTimeField()
@@ -10,6 +10,7 @@ class Calimaco(models.Model):
     email = models.EmailField(default="example@example.com")
     cantidad = models.IntegerField(default=0)
     id_externo = models.CharField(max_length=20, default="Unknown")
+    metodo = models.TextField(default="N/A")
     respuesta = models.TextField(default="N/A")
     agente = models.IntegerField(default=0)
     fecha_de_registro_del_jugador = models.DateTimeField()

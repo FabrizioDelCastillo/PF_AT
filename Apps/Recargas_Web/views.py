@@ -59,7 +59,7 @@ def cargar_archivo(request):
 
             # Diccionario para mapear nombres esperados a sus equivalentes normalizados
             column_mapping = {
-                "cliente": "cliente",
+                "identifer_cal": "identifer_cal",
                 "fecha": "fecha",
                 "estado": "estado",
                 "fecha_modificacion": "fecha_modificacion",
@@ -67,6 +67,7 @@ def cargar_archivo(request):
                 "email": "email",
                 "cantidad": "cantidad",
                 "id_externo": "id_externo",
+                "metodo": "metodo",
                 "respuesta": "respuesta",
                 "agente": "agente",
                 "fecha_de_registro_del_jugador": "fecha_de_registro_del_jugador",
@@ -87,7 +88,7 @@ def cargar_archivo(request):
                 print(row)
                 try:
                     Calimaco.objects.update_or_create(
-                        cliente=row[column_mapping["cliente"]],
+                        identifer_cal=row[column_mapping["identifer_cal"]],
                         fecha=row[column_mapping["fecha"]],
                         estado=row[column_mapping["estado"]],
                         fecha_modificacion=row[column_mapping["fecha_modificacion"]],
@@ -95,6 +96,7 @@ def cargar_archivo(request):
                         email=row[column_mapping["email"]],
                         cantidad=row[column_mapping["cantidad"]],
                         id_externo=row[column_mapping["id_externo"]],
+                        metodo=row[column_mapping["metodo"]],
                         respuesta=row[column_mapping["respuesta"]],
                         agente=row[column_mapping["agente"]],
                         fecha_de_registro_del_jugador=row[
